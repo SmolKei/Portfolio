@@ -1,0 +1,14 @@
+#container {
+    z-index: 2;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 150px;
+    position: relative;
+}
+.main-content {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
