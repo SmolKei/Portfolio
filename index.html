@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./public/style.css">
     <script src="./src/script/burger.js" defer></script>
+    <script src="./src/script/animation.js" defer></script>
 </head>
 <body>
     <header>
         <div class="menu">
             <div class="logo">
-                <h3 class="typewriter"><span>{</span>SmoKei<span>}</span></h3>
+                <h3 class="type"><a href="#">{<span>SmoKei</span>}</a></h3>
             </div>
             <nav class="navbar">
                 <ul>
@@ -31,14 +33,24 @@
     </header>
         <main id="container">
             <section class="main-content">
-                <div>
-                    <div>
-                        <h3>Bonjour, Je suis</h3>
-                        <h1>PHILIPPE Kevin</h1>
-                        <p>Et je suis un dev <span id="swap"></span></p>
+                <div class="main-container">
+                    <div class="presentation">
+                        <div class="boxglitch">
+                            <h3 class="glitch" data-glitch="Bonjour, je suis">Bonjour, je suis</h3>
+                            <h1 class="glitch" data-glitch="Johny HALIDAY">Johny HALIDAY</h1>
+                        </div>
+                        <div class="description">
+                            <p>Et je suis un développeur <span id="swap"></span><span class="bl">|</span> junior.</p>
+                            <p>Actuellement en formation DWWM je souhaite parfaire mes compétences dans le milieu du développement Web et Web Mobile.</p>
+                        </div>
                         <div class="btn-box">
                             <button type="submit" class="btn">Télécharger CV</button>
+                            <button type="submit" class="btn">Me contacter</button>
                         </div>
+                    </div>
+                    <div class="socials">
+                        <a href="http://github.com/"><i class="fa-brands fa-github fa-2xl"></i></a>
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
                     </div>
                 </div>
             </section>
@@ -48,5 +60,5 @@
                 </div>
             </section>
         </main>
-</body>
+    </body>
 </html>

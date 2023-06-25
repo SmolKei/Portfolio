@@ -1,115 +1,140 @@
-*, ::before, ::after
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  height: 200vh;
+  overflow-x: hidden;
+  background-color: #eaedf0;
+}
+
 header {
-    display: flex;
-    background-color: #E1E5EA;
-    position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 8%;
-    z-index: 999;
-    box-shadow: 2px 0.5px 4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  background-color: #eaedf0;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 8%;
+  z-index: 999;
+  box-shadow: 2px 0.5px 4px rgba(0, 0, 0, 0.15);
 }
+
 .logo {
-    margin: 0 20px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: transform .1s;
-    animation: rslide 1s forwards;
-    padding: 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.1s;
+  animation: rslide 1s forwards;
+  padding: 15px;
+  left: 50px;
 }
-a {
-    text-decoration: none;
-    color: green;
+
+header a {
+  color: #ff0000;
+  text-decoration: none;
+  text-shadow: 0 0 5px #5f0404, 0 0 15px #5f0404, 0 0 20px #5f0404, 0 0 40px #5f0404, 0 0 25px #ff0000, 0 0 10px #5f0404, 0 0 12px #ff0000;
 }
+
 .burgerbox {
-    font-size: 1.5rem;
-    display: inline-block;
-    width: 25px; 
-    height: 20px;
-    position: absolute;
-    left: calc(95% - 25px);
-    top: calc(2.1rem - 9.5px);
-    cursor: pointer;
-    z-index: 1;
-    transition: all 1s;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  left: 90%;
+  top: 30%;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 1s;
 }
+
 .burger {
-    display: block;
-    width: 100%; 
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    left: 0;
-    transition: all 0.5s;
-    cursor: pointer;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ff0000;
+  box-shadow: 0 0 5px #5f0404, 0 0 15px #5f0404, 0 0 20px #5f0404, 0 0 40px #5f0404, 0 0 25px #ff0000, 0 0 10px #5f0404, 0 0 12px #ff0000;
+  position: absolute;
+  left: 0;
+  transition: all 0.5s;
+  cursor: pointer;
 }
+
 .burger:nth-child(1) {
-    top: 0;
+  top: 0;
 }
+
 .burger:nth-child(2) {
-    top: 50%;
+  top: 50%;
 }
+
 .burger:nth-child(3) {
-    top: 100%;
+  top: 100%;
 }
+
 .burgerbox.cross .burger:nth-child(1) {
-    top: 50%;
-    rotate: 45deg;
+  top: 50%;
+  rotate: 45deg;
 }
+
 .burgerbox.cross .burger:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
+
 .burgerbox.cross .burger:nth-child(3) {
-    top: 50%;
-    rotate: -45deg;
+  top: 50%;
+  rotate: -45deg;
 }
-.menu ul
-{
-    display: flex;
-    justify-content: space-evenly;
-    width: 0; 
-    overflow: hidden;
-    transition: all 1s;
-    position: absolute;
-    right: 0;
-    padding: 1rem 0;
-    background-color: #E1E5EA;
-    box-shadow: 2px 0.5px 4px rgba(0, 0, 0, 0.15);
+
+.menu ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 0;
+  overflow: hidden;
+  transition: all 1s;
+  position: absolute;
+  right: 0;
+  padding: 1rem 0;
+  background-color: #eaedf0;
+  box-shadow: 2px 0.5px 4px rgba(0, 0, 0, 0.15);
 }
+
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .active {
-    animation: slide 1s ease-in-out forwards;
+  animation: slide 1s ease-in-out forwards;
 }
+
 @keyframes slide {
-    0% {
-        opacity: 0;
-    } 90% {
-        transform: translateX(60vw);
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(60vw);
-    }
+  0% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateX(60vw);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(68vw);
+  }
 }
 @keyframes rslide {
-    0% {
-        opacity: 0;
-        transform: translateX(60vw);
-    } 90% {
-        transform: translateX(0vw);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(65vw);
+  }
+  90% {
+    transform: translateX(0vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
+
+/*# sourceMappingURL=header.css.map */

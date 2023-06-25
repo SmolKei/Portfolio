@@ -1,0 +1,16 @@
+$primarycolor: #eaedf0;
+$secondarycolor: #0d1822;
+$bordershadow: 2px 0.5px 4px rgba(0, 0, 0, 0.15);
+$steps: 20;
+
+*, ::before, ::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 200vh;
+    overflow-x: hidden;
+    background-color: $primarycolor;
+}
