@@ -1,16 +1,40 @@
-$primarycolor: #eaedf0;
-$secondarycolor: #0d1822;
+$primecolor: #fff;
+$secondcolor: rgb(0, 15, 15);
+$lightstroke:rgb(84, 190, 220);
+$darkstroke: rgb(237, 30, 120);
+// $primarycolor: #eaedf0;
+// $secondarycolor: #0d1822;
 $bordershadow: 2px 0.5px 4px rgba(0, 0, 0, 0.15);
+$neonshadow: 0 0 5px rgb(12, 176, 221),
+0 0 15px rgb(12, 176, 221),
+0 0 20px rgb(12, 176, 221),
+0 0 40px rgb(12, 176, 221),
+0 0 25px rgb(84, 190, 220),
+0 0 10px rgb(12, 176, 221),
+0 0 12px rgb(84, 190, 220);
 $steps: 20;
-
+$font-title: 'shuttle', sans-serif;
+$font-main: 'squiver', sans-serif;
 *, ::before, ::after
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: 'shuttle';
+    src: url(./assets/fonts/SHUTTLE-X.ttf) format('truetype');
+}
+@font-face {
+    font-family:  "squiver";
+    src: url(./assets/fonts/Squiver.ttf) format('truetype');
 }
 body {
-    height: 200vh;
+    background-color: $primecolor;
     overflow-x: hidden;
-    background-color: $primarycolor;
+    font-family: $font-main;
+}
+a {
+    text-decoration: none;
 }

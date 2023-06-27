@@ -11,15 +11,15 @@ burger.addEventListener("click", function() {
     else
     {
         burger.style.left = "";
-        burger.style.rotate = "";
+        burger.style.transform = "";
         menu.style.width = "";
     }
 });
 cross.addEventListener("transitionend", function(e) {
-    if(e.propertyName !== "rotate")return;
+    if(e.propertyName !== "transform")return;
     if(burger.classList.contains("cross"))
     {
-        burger.style.rotate = "720deg";
+        burger.style.transform = "rotate(720deg)";
         burger.style.left = "5%";
         menu.style.width = "100%";
     }

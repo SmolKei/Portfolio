@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./public/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
+    <script src="./src/script/slider.js" defer></script>
     <script src="./src/script/burger.js" defer></script>
     <script src="./src/script/animation.js" defer></script>
 </head>
@@ -37,26 +39,106 @@
                     <div class="presentation">
                         <div class="boxglitch">
                             <h3 class="glitch" data-glitch="Bonjour, je suis">Bonjour, je suis</h3>
-                            <h1 class="glitch" data-glitch="Johny HALIDAY">Johny HALIDAY</h1>
+                            <h1 class="glitch" data-glitch="Kevin PHILIPPE">Kevin PHILIPPE</h1>
                         </div>
                         <div class="description">
-                            <p>Et je suis un développeur <span id="swap"></span><span class="bl">|</span> junior.</p>
+                            <p>Je suis un développeur <br><span id="swap"></span> <span class="bl">|</span> junior.</p>
                             <p>Actuellement en formation DWWM je souhaite parfaire mes compétences dans le milieu du développement Web et Web Mobile.</p>
                         </div>
                         <div class="btn-box">
-                            <button type="submit" class="btn">Télécharger CV</button>
-                            <button type="submit" class="btn">Me contacter</button>
+                            <button type="button" class="btn">Télécharger CV</button>
+                            <button type="button" class="btn">Me contacter</button>
                         </div>
-                    </div>
-                    <div class="socials">
-                        <a href="http://github.com/"><i class="fa-brands fa-github fa-2xl"></i></a>
-                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                        <div class="socials">
+                            <a href="http://github.com/"><img class="social-logo" src="./public/assets/image/github.svg" alt="logo github"/></a>
+                            <a href="http://linkedin.com"><img class="social-logo" src="./public/assets/image/linkedin.svg" alt="logo linkedin"/></a>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="Projets">
                 <div class="section-title">
                     <h2>Projets</h2>
+                </div>
+                <div class="project-container">
+                    <div class="sliders-container">
+                        <div class="swipe-content">
+                            <div class="wrapper swiper-wrapper">
+                                <div class="slides swiper-slide">
+                                    <div class="img-container">
+                                        <div class="img-content">
+                                            <img src="./public/assets/image/portfolio.png" alt="portfolio" class="image">
+                                        </div>
+                                    </div>
+                                    <div class="projet-description">
+                                        <h2 class="titre">Portfolio</h2>
+                                        <p class="description">Mon portfolio réalisé lors de ma formation DWWM</p>
+                                        <a href="https://github.com" target="_blank" class="projet-btn">Voir</a>
+                                    </div>
+                                </div>
+                                <div class="slides swiper-slide">
+                                    <div class="img-container">
+                                        <div class="img-content">
+                                            <img src="./public/assets/image/connect4.png" alt="connect4" class="image">
+                                        </div>
+                                    </div>
+                                    <div class="projet-description">
+                                        <h2 class="titre">Connect 4</h2>
+                                        <p class="description">Un puissance 4 réalisé lors de ma première année de développement Web à Epitech</p>
+                                        <a href="https://github.com" target="_blank" class="projet-btn">Voir</a>
+                                    </div>
+                                </div>
+                                <div class="slides swiper-slide">
+                                    <div class="img-container">
+                                        <div class="img-content">
+                                            <!-- <img src="" alt="" class="image"> -->
+                                        </div>
+                                    </div>
+                                    <div class="projet-description">
+                                        <h2 class="titre">Projet 3 WIP</h2>
+                                        <p class="description">En cours</p>
+                                        <a href="https://github.com" target="_blank" class="projet-btn">Voir</a>
+                                    </div>
+                                </div>
+                                <div class="slides swiper-slide">
+                                    <div class="img-container">
+                                        <div class="img-content">
+                                            <!-- <img src="" alt="" class="image"> -->
+                                        </div>
+                                    </div>
+                                    <div class="projet-description">
+                                        <h2 class="titre">Projet 4 WIP</h2>
+                                        <p class="description">En cours</p>
+                                        <a href="https://github.com" target="_blank" class="projet-btn">Voir</a>
+                                    </div>
+                                </div>
+                                <div class="slides swiper-slide">
+                                    <div class="img-container">
+                                        <div class="img-content">
+                                            <!-- <img src="" alt="" class="image"> -->
+                                        </div>
+                                    </div>
+                                    <div class="projet-description">
+                                        <h2 class="titre">Projet 5 WIP</h2>
+                                        <p class="description">En cours</p>
+                                        <a href="https://github.com" target="_blank" class="projet-btn">Voir</a>
+                                    </div>
+                                </div>
+                                <div class="slides swiper-slide">
+                                    <div class="img-container">
+                                        <div class="img-content">
+                                            <!-- <img src="" alt="" class="image"> -->
+                                        </div>
+                                    </div>
+                                    <div class="projet-description">
+                                        <h2 class="titre">Projet 6 WIP</h2>
+                                        <p class="description">En cours</p>
+                                        <a href="https://github.com" target="_blank" class="projet-btn">Voir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

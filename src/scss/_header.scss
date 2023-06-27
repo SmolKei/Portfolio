@@ -1,7 +1,7 @@
 @use "default" as v;
 header {
     display: flex;
-    background-color: v.$primarycolor;
+    background-color: v.$primecolor;
     position: fixed;
     justify-content: space-between;
     align-items: center;
@@ -11,24 +11,19 @@ header {
     box-shadow: v.$bordershadow;
 }
 .logo {
-    margin: 0 5px;
+    -webkit-text-stroke: 1px v.$lightstroke;
     cursor: pointer;
     font-size: 1.2rem;
-    transition: transform .1s;
+    transition: transform .5s;
     animation: rslide 1s forwards;
-    padding: 15px;
-    left: 50px;
+    padding: 1.5rem;
+    left: 2rem;
+    font-family: v.$font-title;
 }
 header a {
-    color: #ff0000;
-    text-decoration: none;
-    text-shadow: 0 0 5px #5f0404,
-    0 0 15px #5f0404,
-    0 0 20px #5f0404,
-    0 0 40px #5f0404,
-    0 0 25px #ff0000,
-    0 0 10px #5f0404,
-    0 0 12px #ff0000;
+    -webkit-text-stroke: 1px v.$lightstroke;
+    color: v.$secondcolor;
+    text-shadow: v.$neonshadow
 }
 
 .burgerbox {
@@ -37,8 +32,8 @@ header a {
     width: 25px; 
     height: 20px;
     position: absolute;
-    left: calc(95% - 5%);
-    top: calc(50% - 20%);
+    left: 90%;
+    top: 35%;
     cursor: pointer;
     z-index: 1;
     transition: all 1s;
@@ -47,17 +42,11 @@ header a {
     display: block;
     width: 100%; 
     height: 2px;
-    background-color: #ff0000;
-    box-shadow: 0 0 5px #5f0404,
-    0 0 15px #5f0404,
-    0 0 20px #5f0404,
-    0 0 40px #5f0404,
-    0 0 25px #ff0000,
-    0 0 10px #5f0404,
-    0 0 12px #ff0000;
+    background-color: v.$secondcolor;
+    box-shadow: v.$neonshadow;
     position: absolute;
     left: 0;
-    transition: all 0.5s;
+    transition: all .3s ease;
     cursor: pointer;
 }
 .burger:nth-child(1) {
@@ -71,14 +60,14 @@ header a {
 }
 .burgerbox.cross .burger:nth-child(1) {
     top: 50%;
-    rotate: 45deg;
+    transform: rotate(45deg);
 }
 .burgerbox.cross .burger:nth-child(2) {
     opacity: 0;
 }
 .burgerbox.cross .burger:nth-child(3) {
     top: 50%;
-    rotate: -45deg;
+    transform: rotate(-45deg);
 }
 .menu ul
 {
@@ -89,37 +78,33 @@ header a {
     transition: all 1s;
     position: absolute;
     right: 0;
+    top: 100%;
     padding: 1rem 0;
-    background-color: v.$primarycolor;
+    background-color: v.$primecolor;
     box-shadow: 2px 0.5px 4px rgba(0, 0, 0, 0.15);
 }
 li {
     list-style: none;
+    font-size: .8rem;
 }
-
-
 .active {
     animation: slide 1s ease-in-out forwards;
 }
 @keyframes slide {
     0% {
-        opacity: 0;
-    } 90% {
-        transform: translateX(60vw);
+        transform: translateX(0);
         opacity: 0;
     }
     100% {
         opacity: 1;
-        transform: translateX(68vw);
+        transform: translateX(65vw);
     }
 }
 @keyframes rslide {
     0% {
         opacity: 0;
-        transform: translateX(65vw);
-    } 90% {
-        transform: translateX(0vw);
-    }
+        transform: translateX(65%);
+    } 
     100% {
         opacity: 1;
         transform: translateX(0);
