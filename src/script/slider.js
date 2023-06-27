@@ -3,16 +3,14 @@
 const swiper = new Swiper('.swipe-content', {
     // paramètre défaut
     slidesPerView: 5,
-    spaceBetween: 15,
-    // direction: 'horizontal',
+    spaceBetween: 20,
     loop: true,
     centerSlide: "true",
-    effect: 'flip',
+    fade: "true",
     grabCursor: "true",
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        // type: 'bullets',
         dynamicBullets: true,
     },
     navigation: {
@@ -22,19 +20,13 @@ const swiper = new Swiper('.swipe-content', {
     breakpoints: {
         // define width
         0: {
-            effect: 'flip',
-    flipEffect: {
-        slideShadows : false,
-    },
+            slidesPerView: 1,
         },
         768: {
-            effect: 'fade',
-            fadeEffect: {
-              crossFade: true
-            },
+            slidesPerView: 2,
         },
         1024: {
-            slidesPerView: 8,
+            slidesPerView: 3,
         },
     },
 });
