@@ -3,7 +3,7 @@
 const burger  = document.querySelector('.burgerbox');
 const cross = document.querySelector('.burger');
 const menu = document.querySelector('ul');
-const logo = document.querySelector('.logo');
+const logo = document.querySelector('.brand');
 burger.addEventListener("click", function() {
     logo.classList.toggle('active');
     if(!this.classList.contains("cross"))

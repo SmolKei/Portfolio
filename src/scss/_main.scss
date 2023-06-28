@@ -75,21 +75,24 @@ h1 {
     margin-top: 2rem;
     width: 100%;
     height: 5rem;
-    gap: 2rem;
+    gap: 2.2rem;
 }
 .btn-box .btn {
+    background-color: v.$primecolor;
     position: relative;
     justify-content: center;
     align-items: center;
     width: 12rem;
     height: 100%;
-    border: .2rem solid v.$secondcolor;
+    border: .2rem solid v.$lightstroke;
     border-radius: .8rem;
-    background-color: rgb(84, 190, 220);;
     font-family: v.$font-title;
     transition: opacity .2s;
+    box-shadow: 0 5px 15px v.$lightstroke;
         &:hover {
             opacity: 0.8;
+            background-color: v.$lightstroke;
+            box-shadow: v.$neonshadow;
         }
 }
 .socials {
@@ -102,6 +105,12 @@ h1 {
 .social-logo {
     height: 50px;
     width: 50px;
+    border-radius: 100%;
+    background-color: transparent;
+    fill: v.$lightstroke;
+    &:hover {
+        box-shadow: v.$neonshadow;
+    }
 }
 .bl {
     animation: blink 1s linear infinite;

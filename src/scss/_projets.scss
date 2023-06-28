@@ -33,11 +33,11 @@ section.projets {
     width: auto;
     max-width: 1500px;
 }
-
 .slides{
     background: linear-gradient(v.$lightstroke, v.$primecolor);
     border-radius: 20px 20px 10px 10px;
     border: 1px solid rgba(84, 190, 220, 0.5);
+    box-shadow: 0 0 5px v.$lightstroke;
 }
 .img-container,
 .projets-description{
@@ -45,7 +45,6 @@ section.projets {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0.625rem 0.875rem;
 }
 .img-container {
     position: relative;
@@ -56,7 +55,7 @@ section.projets {
 }
 .img-content {
     background-color: #FFF;
-    border: 1px solid v.$lightstroke;
+    border: 2px solid v.$lightstroke;
     padding: 3px;
     transition: 0.3s;
     border-radius: 10px;
@@ -70,17 +69,33 @@ section.projets {
     object-fit: cover;
     cursor: pointer;
 }
-
-.projet-btn{
+.titre {
+    padding-top: 15px;
+    font-family: v.$font-title;
+    font-size: 2rem;
+    -webkit-text-stroke: v.$lightstroke;
+}
+.mini {
+    margin: 10px;
+    height: 15vh;
+}
+.slide-btn {
     position: relative;
-    border: none;
+    padding: 50px;
+}
+.projet-btn {
+    border: 1px solid v.$lightstroke;
+    box-shadow: v.$neonshadow;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: v.$primecolor;
     color: v.$secondcolor;
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
-    text-decoration: none;
     font-weight: bold;
-  }
-  .projet-btn:hover{
-    opacity: 0.4;
-  }
+    position: relative;  
+    &:hover {
+        opacity: 0.8;
+    }
+}

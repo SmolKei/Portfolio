@@ -3,7 +3,7 @@
 const swiper = new Swiper('.swipe-content', {
     // paramètre défaut
     slidesPerView: 5,
-    spaceBetween: 20,
+    spaceBetween: 25,
     loop: true,
     centerSlide: "true",
     fade: "true",
