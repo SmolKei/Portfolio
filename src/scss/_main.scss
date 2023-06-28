@@ -15,6 +15,9 @@ main {
     position: relative;
     margin: 1rem;
 }
+.anim {
+    animation: slide-in-left 1s ease-in-out both;
+}
 .boxglitch {
     border: solid 1px v.$lightstroke;
     width: 75%;
@@ -23,6 +26,7 @@ main {
     padding: 1rem;
     border-radius: 30px;
     box-shadow: v.$neonshadow;
+    animation: scale-in 1.5s ease-in-out both;
 }
 .glitch {
     position: relative;

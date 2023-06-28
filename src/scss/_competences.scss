@@ -1,7 +1,7 @@
 @use "default" as v;
 
 .competences {
-    margin-top: -15%;
+    margin-top: -10%;
 }
 .competence-container {
     overflow: hidden;
@@ -31,6 +31,9 @@
 }
 .js-scroll.scrolled {
     opacity: 1;
+}
+.scrolled.scale-in {
+    animation: scale-in 1s ease-in-out both;
 }  
 .scrolled.slide-left {
     animation: slide-in-left 1s ease-in-out both;
@@ -40,8 +43,8 @@
 }
 @keyframes slide-in-left {
     0% {
-        -webkit-transform: translateX(-100px);
-        transform: translateX(-100px);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
         opacity: 0;
     }
     100% {
@@ -52,8 +55,8 @@
 }
 @keyframes slide-in-right {
     0% {
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
         opacity: 0;
     }
     100% {
@@ -64,12 +67,8 @@
 }
 @keyframes scale-in {
     0% {
-        opacity: 0.3;
+        opacity: 0.1;
         transform: scale(0.1);
-    }
-    50% {
-        opacity: 0.5;
-        transform: scale(0.5);
     }
     100% {
         opacity: 1;
