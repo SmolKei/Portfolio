@@ -1,21 +1,26 @@
 "use strict";
 
-const swiper = new Swiper('.swipe-content', {
+const swiper = new Swiper('.swiper', {
     // paramètre défaut
     slidesPerView: 5,
     spaceBetween: 25,
     loop: true,
-    centerSlide: "true",
+    centerSlides: "true",
     fade: "true",
     grabCursor: "true",
     pagination: {
         el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
+        type: "fraction",
+    },
+    renderFraction: function (currentClass, totalClass) {
+        return '<span class="' + currentClass + '"></span>' +
+                ' of ' +
+                '<span class="' + totalClass + '"></span>';
     },
     navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+    disabledClass: ".swiper-button-disabled"
     },
     breakpoints: {
         // define width

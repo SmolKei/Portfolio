@@ -3,16 +3,20 @@
 const burger  = document.querySelector('.burgerbox');
 const cross = document.querySelector('.burger');
 const menu = document.querySelector('ul');
-const logo = document.querySelector('.brand');
+const navbar = document.querySelector('.navbar');
+const body  = document.querySelector('body');
 burger.addEventListener("click", function() {
-    logo.classList.toggle('active');
+    navbar.classList.toggle('open');
+    burger.animate({opacity: [0, 1]}, {duration: 2700, fill: 'forwards'});
     if(!this.classList.contains("cross"))
         this.classList.add("cross");
+        
     else
     {
         burger.style.left = "";
         burger.style.transform = "";
         menu.style.width = "";
+        
     }
 });
 cross.addEventListener("transitionend", function(e) {
@@ -22,6 +26,9 @@ cross.addEventListener("transitionend", function(e) {
         burger.style.transform = "rotate(720deg)";
         burger.style.left = "5%";
         menu.style.width = "100%";
+    }
+    else {
+        burger.animate({opacity: [0, 1]}, {duration: 2000, fill: 'forwards'});
     }
 });
 burger.addEventListener("transitionend", function(e) {

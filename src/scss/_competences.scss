@@ -25,53 +25,53 @@
         transform: scale(1.3);
     }
 }
-.js-scroll {
-    opacity: 0;
-    transition: opacity 500ms;
-}
-.js-scroll.scrolled {
-    opacity: 1;
-}
-.scrolled.scale-in {
-    animation: scale-in 1s ease-in-out both;
-}  
-.scrolled.slide-left {
-    animation: slide-in-left 1s ease-in-out both;
-}
-.scrolled.slide-right {
-    animation: slide-in-right 1s ease-in-out both;
-}
-@keyframes slide-in-left {
-    0% {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes slide-in-right {
-    0% {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes scale-in {
-    0% {
-        opacity: 0.1;
-        transform: scale(0.1);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+// .js-scroll {
+//     opacity: 0;
+//     transition: opacity 500ms;
+// }
+// .js-scroll.scrolled {
+//     opacity: 1;
+// }
+// .scrolled.scale-in {
+//     animation: scale-in 1s ease-in-out both;
+// }  
+// .scrolled.slide-left {
+//     animation: slide-in-left 1s ease-in-out both;
+// }
+// .scrolled.slide-right {
+//     animation: slide-in-right 1s ease-in-out both;
+// }
+// @keyframes slide-in-left {
+//     0% {
+//         -webkit-transform: translateX(-100%);
+//         transform: translateX(-100%);
+//         opacity: 0;
+//     }
+//     100% {
+//         -webkit-transform: translateX(0);
+//         transform: translateX(0);
+//         opacity: 1;
+//     }
+// }
+// @keyframes slide-in-right {
+//     0% {
+//         -webkit-transform: translateX(100%);
+//         transform: translateX(100%);
+//         opacity: 0;
+//     }
+//     100% {
+//         -webkit-transform: translateX(0);
+//         transform: translateX(0);
+//         opacity: 1;
+//     }
+// }
+// @keyframes scale-in {
+//     0% {
+//         opacity: 0.1;
+//         transform: scale(0.1);
+//     }
+//     100% {
+//         opacity: 1;
+//         transform: scale(1);
+//     }
+// }

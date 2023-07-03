@@ -6,96 +6,57 @@ section.projets {
     position: relative;
     display: flex;
     justify-content: center;
-    padding-top: 15%;
+    text-align: center;
+    margin-top: 2rem;
     font-size: 2rem;
     width: 100vw;
-    -webkit-text-stroke: 1px v.$lightstroke;
+    -webkit-text-stroke: 1px v.$darkstroke;
     font-family: v.$font-title;
-}
-.project-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 1.8rem;
-    padding-bottom: 1rem;
-    width: 100%;
-    max-width: 100vw;
+    color: v.$primecolor;
 }
 .sliders-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    min-width: 100vw;
-}
-.swipe-content{
-    overflow: hidden;
-    margin: 1rem;
-    width: auto;
-    max-width: 1500px;
-}
-.slides{
-    background: linear-gradient(v.$lightstroke, v.$primecolor);
-    border-radius: 20px 20px 10px 10px;
-    border: 1px solid rgba(84, 190, 220, 0.5);
-    box-shadow: 0 0 5px v.$lightstroke;
-}
-.img-container,
-.projets-description{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.img-container {
-    position: relative;
-    padding: 1.6rem 0;
-    height: 12rem;
-    width: 80%;
-    margin: auto;
-}
-.img-content {
-    background-color: #FFF;
-    border: 2px solid v.$lightstroke;
-    padding: 3px;
-    transition: 0.3s;
-    border-radius: 10px;
-}
-.img-content:hover {
-    transform: skew(5deg, 5deg);
-}
-.img-container .img-content {
-    height: 100%;
+    max-width: 1120px;
     width: 100%;
-    object-fit: cover;
-    cursor: pointer;
+    padding: 0 40px;
+    background-color: blue;
 }
-.titre {
-    padding-top: 1rem;
-    font-family: v.$font-title;
-    font-size: 2rem;
-    -webkit-text-stroke: v.$lightstroke;
+.swipe-content {
+    margin: 0 40px;
+    background-color: red;
 }
-.mini {
-    margin: 1.5rem;
-    height: 15vh;
-}
-.slide-btn {
+
+.pagination {
+    color: #fff;
+    display: flex;
+    justify-content: center;
     position: relative;
-    padding: 50px;
 }
-.projet-btn {
-    border: 1px solid v.$lightstroke;
-    box-shadow: v.$neonshadow;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: v.$primecolor;
-    color: v.$secondcolor;
-    border-radius: 6px;
+// .swipe-btn {
+//     align-items: center;
+//     background: #4bff20;
+//     border: 1px solid transparent;
+//     cursor: pointer;
+//     display: inline-flex;
+//     justify-content: center;
+//     min-width: 144px;
+//     position: relative;
+// }
+.next:after {
+    @include v.arrow(v.$secondcolor, right);
+    position: absolute;
+}
+.prev:after {
+    @include v.arrow(v.$secondcolor, left);
+}
+.swipe-btn {
+    align-items: center;
+    background: #4bff20;
+    border: 1px solid transparent;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    position: relative;  
-    &:hover {
-        opacity: 0.8;
-    }
-}
+    display: inline-flex;
+    justify-content: center;
+    min-width: 144px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }

@@ -1,7 +1,9 @@
 $primecolor: #fff;
 $secondcolor: rgb(0, 15, 15);
-$lightstroke:rgb(84, 190, 220);
-$darkstroke: rgb(237, 30, 120);
+$lightstroke:#00f0ff;
+$darkstroke: #fd0130;
+$size: 10px;
+
 // $primarycolor: #eaedf0;
 // $secondarycolor: #0d1822;
 $bordershadow: 2px 0.5px 4px rgba(0, 0, 0, 0.15);
@@ -13,8 +15,22 @@ $neonshadow: 0 0 5px rgb(12, 176, 221),
 0 0 10px rgb(12, 176, 221),
 0 0 12px rgb(84, 190, 220);
 $steps: 20;
-$font-title: 'shuttle', sans-serif;
-$font-main: 'squiver', sans-serif;
+$font-title: 'Refinery25', sans-serif;
+$font-main: 'BlenderProBook', sans-serif;
+$font-logo: 'Shuttle', sans-serif;
+
+@mixin arrow($colour, $direction:"") {
+        border-#{$direction}: 10px solid $colour;
+        border-top: 10px solid transparent;
+        bottom: 0;
+        content: "";
+        height: 10px;
+        position: absolute;
+        width: 10px;
+        #{$direction}: -1px;
+}
+
+
 *, ::before, ::after
 {
     margin: 0;
@@ -23,18 +39,27 @@ $font-main: 'squiver', sans-serif;
     scroll-behavior: smooth;
 }
 @font-face {
-    font-family: 'shuttle';
+    font-family: 'Shuttle';
     src: url(./assets/fonts/SHUTTLE-X.ttf) format('truetype');
 }
 @font-face {
-    font-family:  "squiver";
-    src: url(./assets/fonts/Squiver.ttf) format('truetype');
+    font-family:  "BlenderProBook";
+    src: url(./assets/fonts/Blender-Pro-Book.otf) format('opentype');
+}
+@font-face {
+    font-family: "Refinery25";
+    src: url('./assets/fonts/refinery-25-bold.ttf') format('truetype');
 }
 body {
-    background-color: $primecolor;
+    background-color: $secondcolor;
     overflow-x: hidden;
     font-family: $font-main;
+    color: $primecolor;
+    display: flex;
+    width: 100%;
+    padding: 40px 0;
 }
 a {
     text-decoration: none;
+    color: $primecolor;
 }
