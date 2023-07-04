@@ -27,9 +27,6 @@ cross.addEventListener("transitionend", function(e) {
         burger.style.left = "5%";
         menu.style.width = "100%";
     }
-    else {
-        burger.animate({opacity: [0, 1]}, {duration: 2000, fill: 'forwards'});
-    }
 });
 burger.addEventListener("transitionend", function(e) {
     if(e.propertyName !== "left")return;

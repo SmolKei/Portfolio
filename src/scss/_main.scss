@@ -112,10 +112,10 @@ h1 {
         }
     }
 .cv:after {
-    @include v.arrow(v.$secondcolor, right)
+    @include v.arrow(v.$secondcolor, right);
 }
 .contact:after {
-    @include v.arrow(v.$secondcolor, left)
+    @include v.arrow(v.$secondcolor, left);
 }
 .socials {
     display: flex;

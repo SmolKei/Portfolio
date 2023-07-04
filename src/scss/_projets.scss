@@ -14,23 +14,79 @@ section.projets {
     font-family: v.$font-title;
     color: v.$primecolor;
 }
-.sliders-container {
-    max-width: 1120px;
+.swiper {
+    width: auto;
+    max-width: 1024px;
+    height: 45vh;
+}
+.swiper-wrapper {
     width: 100%;
-    padding: 0 40px;
-    background-color: blue;
-}
-.swipe-content {
-    margin: 0 40px;
-    background-color: red;
-}
-
-.pagination {
-    color: #fff;
+    height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slides {
+    background-color: aqua;
+    margin: 0 1.6em;
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     position: relative;
 }
+.slide-img {
+    width: 101%;
+    height: 101%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 101%;
+        height: 101%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        bottom: -80px;
+        left: -1px;
+        right: 0;
+    }
+}
+.arrow {
+    border-left: 24px solid v.$secondcolor;
+    border-top: 24px solid transparent;
+    bottom: -5px;
+    display: block;
+    left: -2px;
+    position: absolute;
+    width: 24px;
+    z-index: 1;
+}
+.voir {
+    position: absolute;
+    background-color: v.$secondcolor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: v.$font-title;
+    transition: opacity .2s;
+    width: 15%;
+    height: 15%;
+    &:after {
+        @include v.arrow(blue, left);
+        left: 0;
+    }
+    a {
+        color: red;
+    }
+}
+// .pagination {
+//     color: #fff;
+//     display: flex;
+//     justify-content: center;
+//     position: relative;
+// }
 // .swipe-btn {
 //     align-items: center;
 //     background: #4bff20;
@@ -41,22 +97,22 @@ section.projets {
 //     min-width: 144px;
 //     position: relative;
 // }
-.next:after {
-    @include v.arrow(v.$secondcolor, right);
-    position: absolute;
-}
-.prev:after {
-    @include v.arrow(v.$secondcolor, left);
-}
-.swipe-btn {
-    align-items: center;
-    background: #4bff20;
-    border: 1px solid transparent;
-    cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    min-width: 144px;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
+// .next:after {
+//     @include v.arrow(v.$secondcolor, right);
+//     position: absolute;
+// }
+// .prev:after {
+//     @include v.arrow(v.$secondcolor, left);
+// }
+// .swipe-btn {
+//     align-items: center;
+//     background: #4bff20;
+//     border: 1px solid transparent;
+//     cursor: pointer;
+//     display: inline-flex;
+//     justify-content: center;
+//     min-width: 144px;
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//   }
