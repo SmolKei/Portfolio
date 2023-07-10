@@ -3,9 +3,11 @@
 const swiper = new Swiper('.swiper', {
     // paramètre défaut
     slidesPerView: 5,
+    direction: 'horizontal',
     spaceBetween: 25,
     loop: true,
-    centerSlides: "true",
+    centerSlide: "true",
+    centeredSlidesBounds: true,
     fade: "true",
     grabCursor: "true",
     pagination: {
@@ -25,8 +27,8 @@ const swiper = new Swiper('.swiper', {
     breakpoints: {
         // define width
         0: {
-            slidesPerView: 1,
-        },
+                slidesPerView: 1,
+            },
         768: {
             slidesPerView: 2,
         },

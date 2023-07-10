@@ -1,6 +1,8 @@
 @use "default" as v;
-section.projets {
+.Projets {
     overflow: hidden;
+    width: 100vw;
+    position: relative;
 }
 .section-title {
     position: relative;
@@ -15,104 +17,71 @@ section.projets {
     color: v.$primecolor;
 }
 .swiper {
-    width: auto;
-    max-width: 1024px;
-    height: 45vh;
-}
-.swiper-wrapper {
-    width: 100%;
-    height: 100%;
+    margin-top: 2em;
     display: flex;
-    align-items: center;
+    height: 25rem;
+    width: 100vw;
+    max-width: 1640px;
     justify-content: center;
 }
 .slides {
-    background-color: aqua;
-    margin: 0 1.6em;
-    align-items: center;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    position: relative;
-}
+    background-color: v.$secondcolor;
+    }
 .slide-img {
-    width: 101%;
-    height: 101%;
+    background-color: v.$secondcolor;
+    width: 90%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 2em auto;
     img {
-        width: 101%;
-        height: 101%;
+        width: 90%;
+        height: 60%;
         object-fit: cover;
         position: absolute;
-        top: 0;
-        bottom: -80px;
-        left: -1px;
-        right: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 11% 100%, 0 81%);
     }
-}
-.arrow {
-    border-left: 24px solid v.$secondcolor;
-    border-top: 24px solid transparent;
-    bottom: -5px;
-    display: block;
-    left: -2px;
-    position: absolute;
-    width: 24px;
-    z-index: 1;
 }
 .voir {
     position: absolute;
-    background-color: v.$secondcolor;
+    background-color: v.$projcol;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-family: v.$font-title;
     transition: opacity .2s;
-    width: 15%;
-    height: 15%;
-    &:after {
-        @include v.arrow(blue, left);
-        left: 0;
-    }
+    width: 61px;
+    height: 61px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 21% 100%, 0 81%);
     a {
-        color: red;
+        color: v.$secondcolor;
     }
 }
-// .pagination {
-//     color: #fff;
-//     display: flex;
-//     justify-content: center;
-//     position: relative;
-// }
-// .swipe-btn {
-//     align-items: center;
-//     background: #4bff20;
-//     border: 1px solid transparent;
-//     cursor: pointer;
-//     display: inline-flex;
-//     justify-content: center;
-//     min-width: 144px;
-//     position: relative;
-// }
-// .next:after {
-//     @include v.arrow(v.$secondcolor, right);
-//     position: absolute;
-// }
-// .prev:after {
-//     @include v.arrow(v.$secondcolor, left);
-// }
-// .swipe-btn {
-//     align-items: center;
-//     background: #4bff20;
-//     border: 1px solid transparent;
-//     cursor: pointer;
-//     display: inline-flex;
-//     justify-content: center;
-//     min-width: 144px;
-//     position: relative;
-//     width: 100%;
-//     height: 100%;
-//   }
+.pagination {
+    margin-bottom: 5em;
+    position: relative;
+}
+.swipe-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100vw;
+    align-items: center;
+    align-self: center;
+}
+.swiper-button-prev, .swiper-button-next {
+    background: v.$projcol;
+    cursor: pointer;
+    margin: 8px;
+    min-width: 144px;
+    padding: 11px 28px;
+    position: relative;
+    &:after {
+    display: none;
+}
+ p {
+    color: v.$primecolor;
+ }
+}

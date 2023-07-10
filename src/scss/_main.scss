@@ -1,6 +1,5 @@
 @use "default" as v;
 main {
-    z-index: 2;
     min-height: 100vh;
     flex-wrap: wrap;
     display: flex;
@@ -8,11 +7,14 @@ main {
     text-align: center;
     align-items: center;
     position: relative;
-    padding-top: 8.5rem;
     overflow: hidden;
-    background-image: url(./assets/image/dots-top-menu-mobile.png),url(./assets/image/dots-bottom-menu-mobile.png);
-    background-position: 12px 12px,12px calc(100% - 12px);
-    background-repeat: repeat-x,repeat-x;
+}
+.main-content {
+    padding-top: 8.5rem;
+    width: 100%;
+}
+.main-container {
+    background: linear-gradient(v.$secondcolor, v.$darkstroke);
 }
 .presentation {
     display: flex;
@@ -21,9 +23,16 @@ main {
     align-items: center;
     position: relative;
     margin: 1rem;
-}
-.anim {
-    animation: slide-in-left 1s ease-in-out both;
+    &:after {
+            background-image: url(./assets/image/separator.svg);
+            background-position: 50%;
+        bottom: -2%;
+        content: "";
+        height: 21px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
 }
 .boxglitch {
     display: flex;
@@ -34,13 +43,12 @@ main {
     line-height: 4rem;
     width: 80%;
     height: 30vh;
-    animation: scale-in 1.5s ease-in-out both;
     border: 2px solid #0000;
     background:
-    conic-gradient(from 90deg at top 2px left 2px, #0000 90deg, v.$darkstroke 0) 0 0 / 15% 20% border-box no-repeat,
-    conic-gradient(from 180deg at top 2px right 2px, #0000 90deg, v.$darkstroke 0) 100% 0 / 15% 20% border-box no-repeat,
-    conic-gradient(from 0deg at bottom 2px left 2px, #0000 90deg, v.$darkstroke 0) 0 100% / 15% 20% border-box no-repeat,
-    conic-gradient(from -90deg at bottom 2px right 2px, #0000 90deg, v.$darkstroke 0) 100% 100% / 15% 20% border-box no-repeat;
+    conic-gradient(from 90deg at top 2px left 2px, #0000 90deg, v.$lightstroke 0) 0 0 / 15% 20% border-box no-repeat,
+    conic-gradient(from 180deg at top 2px right 2px, #0000 90deg, v.$lightstroke 0) 100% 0 / 15% 20% border-box no-repeat,
+    conic-gradient(from 0deg at bottom 2px left 2px, #0000 90deg, v.$lightstroke 0) 0 100% / 15% 20% border-box no-repeat,
+    conic-gradient(from -90deg at bottom 2px right 2px, #0000 90deg, v.$lightstroke 0) 100% 100% / 15% 20% border-box no-repeat;
 }
 .glitch {
     position: relative;
@@ -59,7 +67,7 @@ main {
         right: 0;
         overflow: hidden;
         -webkit-text-stroke:1.5px v.$darkstroke;
-        background: v.$secondcolor;
+        background: linear-gradient(#1f0d13, #4c0b19);
         color: v.$primecolor;
         clip: rect(0, 9900px, 0, 0);
     }
@@ -91,44 +99,51 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
     margin-top: 5rem;
     width: 100%;
     height: 3rem;
     gap: 2.2rem;
 }
 .btn-box .btn {
-    background-color: v.$primecolor;
+    background-color: v.$secondcolor;
+    border: 1px solid v.$lightstroke;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    min-width: 9rem;
+    min-width: 144px;
     height: 100%;
     font-family: v.$font-title;
     transition: opacity .2s;
         &:hover {
             opacity: 0.8;
         }
-    }
-.cv:after {
-    @include v.arrow(v.$secondcolor, right);
 }
-.contact:after {
-    @include v.arrow(v.$secondcolor, left);
+ .cv{
+    clip-path: polygon(0 0, 100% 0, 100% 39px, 135px 100%, 0 100%);
+&:after {
+         @include v.arrow(v.$lightstroke, right)
+ }
 }
+ .contact{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 9px 100%, 0 39px);
+     &:after {
+        @include v.arrow(v.$lightstroke, left);
+     }
+ }
 .socials {
     display: flex;
     position: relative;
     justify-content: center;
-    margin-top: 4rem;
+    margin-top: 5rem;
     gap: 50%;
 }
 .social-logo {
     height: 50px;
     width: 50px;
     background-color: transparent;
-    fill: v.$darkstroke;
+    fill: v.$secondcolor;
     &:hover {
         opacity: 0.8;
     }

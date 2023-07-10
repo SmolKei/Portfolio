@@ -1,9 +1,8 @@
 $primecolor: #fff;
 $secondcolor: rgb(0, 15, 15);
-$lightstroke:#00f0ff;
+$lightstroke:#fcee0a;
 $darkstroke: #fd0130;
-$size: 10px;
-
+$projcol : #4bff20;
 // $primarycolor: #eaedf0;
 // $secondarycolor: #0d1822;
 $bordershadow: 2px 0.5px 4px rgba(0, 0, 0, 0.15);
@@ -27,13 +26,12 @@ $font-logo: 'Shuttle', sans-serif;
         height: 10px;
         position: absolute;
         width: 10px;
-        #{$direction}: 0;
+        #{$direction}: -1px;
         @if($direction: left) {
             right: -1px;
         }
+        
 }
-
-
 *, ::before, ::after
 {
     margin: 0;
@@ -62,6 +60,9 @@ body {
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+    background-image: url(./assets/image/dots-top-menu-mobile.png),url(./assets/image/dots-bottom-menu-mobile.png);
+    background-position: 12px 12px,12px calc(100% - 12px);
+    background-repeat: repeat-x,repeat-x;
 }
 a {
     text-decoration: none;

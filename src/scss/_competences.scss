@@ -1,10 +1,21 @@
 @use "default" as v;
-
 .competences {
-    margin-top: -10%;
+    background: linear-gradient(v.$darkstroke, v.$secondcolor);
+    margin-top: 85px;
+    margin-bottom: 8.5rem;
+    &:before {
+        background-image: url(./assets/image/separatorB.svg);
+        background-position: 50%;
+        content: "";
+        height: 21px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
 }
 .competence-container {
     overflow: hidden;
+    margin: 5%;
 }
 .logo {
     display: flex;
