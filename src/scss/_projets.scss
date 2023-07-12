@@ -3,6 +3,8 @@
     overflow: hidden;
     width: 100vw;
     position: relative;
+    z-index: 5;
+    background-color: v.$darkcolor;
 }
 .section-title {
     position: relative;
@@ -12,9 +14,9 @@
     margin-top: 2rem;
     font-size: 2rem;
     width: 100vw;
-    -webkit-text-stroke: 1px v.$darkstroke;
     font-family: v.$font-title;
     color: v.$primecolor;
+    text-transform: uppercase;
 }
 .swiper {
     margin-top: 2em;
@@ -25,10 +27,10 @@
     justify-content: center;
 }
 .slides {
-    background-color: v.$secondcolor;
+    background-color: v.$darkcolor;
     }
 .slide-img {
-    background-color: v.$secondcolor;
+    background-color: v.$darkcolor;
     width: 90%;
     height: 60%;
     display: flex;
@@ -56,32 +58,52 @@
     height: 61px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 21% 100%, 0 81%);
     a {
-        color: v.$secondcolor;
+        color: v.$darkcolor;
+    }
+}
+.projet-description {
+    border: 1px solid var(--data-color-y);
+    position: relative;
+    bottom: -40%;
+    background: rgba(0, 0, 0, .6);
+    width: 150px;
+    height: auto;
+    h2 {
+        color: v.$primecolor;
     }
 }
 .pagination {
-    margin-bottom: 5em;
     position: relative;
+    bottom: 5rem;
+    color: v.$primecolor;
 }
 .swipe-btn-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
     width: 100vw;
     align-items: center;
     align-self: center;
+    gap: 10%;
 }
 .swiper-button-prev, .swiper-button-next {
     background: v.$projcol;
     cursor: pointer;
-    margin: 8px;
     min-width: 144px;
-    padding: 11px 28px;
     position: relative;
+    height: 48px;
+    margin-bottom: 5rem;
     &:after {
     display: none;
 }
  p {
-    color: v.$primecolor;
+    color: v.$darkcolor;
+    font-weight: bold;
+    text-transform: uppercase;
  }
+}
+.swiper-button-prev {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 9px 100%, 0 39px);
+}
+.swiper-button-next {
+    clip-path: polygon(0 0, 100% 0, 100% 39px, 135px 100%, 0 100%);
 }

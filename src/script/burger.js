@@ -4,10 +4,12 @@ const burger  = document.querySelector('.burgerbox');
 const cross = document.querySelector('.burger');
 const menu = document.querySelector('ul');
 const navbar = document.querySelector('.navbar');
-// const cmod  = document.querySelector('.colormod');
 const menu1  = document.querySelectorAll('li:not(.colormod)');
+const cv  = document.querySelector('.cv');
+
 burger.addEventListener("click", function() {
     navbar.classList.toggle('open');
+    document.body.classList.toggle('open');
     burger.animate({opacity: [0, 1]}, {duration: 2700, fill: 'forwards'});
     if(!this.classList.contains("cross"))
         this.classList.add("cross");
@@ -20,7 +22,7 @@ burger.addEventListener("click", function() {
 
             item.style.width = "";
         })
-        
+        menu.style.width = "";
     }
 });
 cross.addEventListener("transitionend", function(e) {
@@ -33,7 +35,7 @@ cross.addEventListener("transitionend", function(e) {
 
             item.style.width = "calc(90vw - 1rem)";
         })
-        // cmod.style.display = "none";
+        menu.style.width = "100%";
     }
 });
 burger.addEventListener("transitionend", function(e) {
@@ -42,4 +44,8 @@ burger.addEventListener("transitionend", function(e) {
     {
         this.classList.remove("cross");
     }
+})
+
+cv.addEventListener("click", () => {
+    window.open('./public/assets/image/dots-top-menu-mobile.png').onload;
 })

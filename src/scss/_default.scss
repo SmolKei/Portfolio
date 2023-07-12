@@ -1,23 +1,22 @@
 $primecolor: #fff;
-$secondcolor: rgb(0, 15, 15);
-$lightstroke:#fcee0a;
-$darkstroke: #fd0130;
+$secondcolor: #222;
+$darkcolor: #000;
+$yellow:#fcee0a;
+$red: #fd0130;
 $projcol : #4bff20;
-// $primarycolor: #eaedf0;
-// $secondarycolor: #0d1822;
-$bordershadow: 2px 0.5px 4px rgba(0, 0, 0, 0.15);
-$neonshadow: 0 0 5px rgb(12, 176, 221),
-0 0 15px rgb(12, 176, 221),
-0 0 20px rgb(12, 176, 221),
-0 0 40px rgb(12, 176, 221),
-0 0 25px rgb(84, 190, 220),
-0 0 10px rgb(12, 176, 221),
-0 0 12px rgb(84, 190, 220);
+$Ytheme : #00f0ff;
+$glitch1:#361f24;
+$glitch2: #611826;
+// $glitch1-2: #343320;
+// $glitch2-2: #5a561c;
 $steps: 20;
 $font-title: 'Refinery25', sans-serif;
 $font-main: 'BlenderProBook', sans-serif;
 $font-logo: 'Shuttle', sans-serif;
+$bgy: url(./assets/image/separatorY.svg);
+$bgr : url(./assets/image/separator.svg);
 
+//Mixin pour mettre un carré coupé en deux pour les angles
 @mixin arrow($colour, $direction:"") {
         border-#{$direction}: 10px solid $colour;
         border-top: 10px solid transparent;
@@ -51,11 +50,24 @@ $font-logo: 'Shuttle', sans-serif;
     font-family: "Refinery25";
     src: url('./assets/fonts/refinery-25-bold.ttf') format('truetype');
 }
+:root{ 
+    --data-color-primary: #{$primecolor};
+    --data-color-secondary: #{$secondcolor};
+    --data-color-y: #{$yellow};
+    --data-color-lang : #{$yellow};
+    --data-color-r: #{$red};
+    --data-color-c : #{$Ytheme};
+    --data-bgcolr : #{$bgr};
+    --data-bgcoly : #{$bgy};
+    --data-colglitch1 : #{$glitch1};
+    --data-colglitch2 : #{$glitch2};
+    --data-color-menu : #{$yellow};
+}
 body {
-    background-color: $secondcolor;
+    background-color: var(--data-color-secondary);
     overflow-x: hidden;
     font-family: $font-main;
-    color: $primecolor;
+    color: var(--data-color-primary);
     display: flex;
     min-height: 100vh;
     justify-content: center;
@@ -66,5 +78,19 @@ body {
 }
 a {
     text-decoration: none;
-    color: $primecolor;
+    color: var(--data-color-primary);
+}
+.yellow {
+    --data-color-primary: var(--data-color-secondary);
+    --data-color-r: var(--data-color-y);
+}
+.border {
+    --data-color-y: var(--data-color-c);
+    p {
+        color: $Ytheme;
+    }
+}
+
+.change {
+    --data-color-y : var(--data-color-c);
 }

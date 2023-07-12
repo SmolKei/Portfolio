@@ -14,7 +14,7 @@ main {
     width: 100%;
 }
 .main-container {
-    background: linear-gradient(v.$secondcolor, v.$darkstroke);
+    background: linear-gradient(v.$secondcolor, var(--data-color-r));
 }
 .presentation {
     display: flex;
@@ -22,9 +22,9 @@ main {
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin: 1rem;
+    margin-top: 1rem;
     &:after {
-            background-image: url(./assets/image/separator.svg);
+            background-image: var(--data-bgcolr);
             background-position: 50%;
         bottom: -2%;
         content: "";
@@ -32,6 +32,7 @@ main {
         left: 0;
         position: absolute;
         width: 100%;
+        z-index: 6;
     }
 }
 .boxglitch {
@@ -45,15 +46,15 @@ main {
     height: 30vh;
     border: 2px solid #0000;
     background:
-    conic-gradient(from 90deg at top 2px left 2px, #0000 90deg, v.$lightstroke 0) 0 0 / 15% 20% border-box no-repeat,
-    conic-gradient(from 180deg at top 2px right 2px, #0000 90deg, v.$lightstroke 0) 100% 0 / 15% 20% border-box no-repeat,
-    conic-gradient(from 0deg at bottom 2px left 2px, #0000 90deg, v.$lightstroke 0) 0 100% / 15% 20% border-box no-repeat,
-    conic-gradient(from -90deg at bottom 2px right 2px, #0000 90deg, v.$lightstroke 0) 100% 100% / 15% 20% border-box no-repeat;
+    conic-gradient(from 90deg at top 2px left 2px, #0000 90deg, v.$darkcolor 0) 0 0 / 25px 25px border-box no-repeat,
+    conic-gradient(from 180deg at top 2px right 2px, #0000 90deg, v.$darkcolor 0) 100% 0 / 25px 25px border-box no-repeat,
+    conic-gradient(from 0deg at bottom 2px left 2px, #0000 90deg, v.$darkcolor 0) 0 100% / 25px 25px border-box no-repeat,
+    conic-gradient(from -90deg at bottom 2px right 2px, #0000 90deg, v.$darkcolor 0) 100% 100% / 25px 25px border-box no-repeat;
+    max-width: 960px;
 }
 .glitch {
     position: relative;
-    -webkit-text-stroke: 1.5px v.$darkstroke;
-    color: v.$primecolor;
+    color: var(--data-color-primary);
     font-family: v.$font-logo;
     font-weight: 600;
     letter-spacing: 0.01em;
@@ -66,9 +67,8 @@ main {
         left: 0;
         right: 0;
         overflow: hidden;
-        -webkit-text-stroke:1.5px v.$darkstroke;
-        background: linear-gradient(#1f0d13, #4c0b19);
-        color: v.$primecolor;
+        background: linear-gradient(var(--data-colglitch1), var(--data-colglitch2));
+        color: var(--data-color-primary);
         clip: rect(0, 9900px, 0, 0);
     }
     &::before {
@@ -91,7 +91,7 @@ h1 {
     line-height: 1.5rem;
     letter-spacing: 0.1rem;
     text-align: center;
-    color: v.$primecolor;
+    color: var(--data-color-primary);
 }
 
 .btn-box {
@@ -106,8 +106,8 @@ h1 {
     gap: 2.2rem;
 }
 .btn-box .btn {
-    background-color: v.$secondcolor;
-    border: 1px solid v.$lightstroke;
+    background: rgba(0, 0, 0, .6);
+    border: 1px solid var(--data-color-y);
     display: flex;
     position: relative;
     justify-content: center;
@@ -123,27 +123,28 @@ h1 {
  .cv{
     clip-path: polygon(0 0, 100% 0, 100% 39px, 135px 100%, 0 100%);
 &:after {
-         @include v.arrow(v.$lightstroke, right)
+         @include v.arrow(var(--data-color-y), right)
  }
 }
  .contact{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 9px 100%, 0 39px);
      &:after {
-        @include v.arrow(v.$lightstroke, left);
+        @include v.arrow(var(--data-color-y), left);
      }
  }
 .socials {
     display: flex;
     position: relative;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem ;
     gap: 50%;
 }
 .social-logo {
     height: 50px;
     width: 50px;
     background-color: transparent;
-    fill: v.$secondcolor;
+    fill: v.$darkcolor;
     &:hover {
         opacity: 0.8;
     }
