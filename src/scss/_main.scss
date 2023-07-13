@@ -128,6 +128,9 @@ h1 {
 }
  .contact{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 9px 100%, 0 39px);
+    a {
+        color : var(--data-color-primary);
+    }
      &:after {
         @include v.arrow(var(--data-color-y), left);
      }

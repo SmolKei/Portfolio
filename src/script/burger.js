@@ -6,24 +6,25 @@ const menu = document.querySelector('ul');
 const navbar = document.querySelector('.navbar');
 const menu1  = document.querySelectorAll('li:not(.colormod)');
 const cv  = document.querySelector('.cv');
-
+const menubtn  = document.querySelectorAll('li:not(.contactbtn) > a');
 burger.addEventListener("click", function() {
     navbar.classList.toggle('open');
     document.body.classList.toggle('open');
     burger.animate({opacity: [0, 1]}, {duration: 2700, fill: 'forwards'});
-    if(!this.classList.contains("cross"))
+    if(!this.classList.contains("cross")){
         this.classList.add("cross");
-        
+    }
     else
     {
         burger.style.left = "";
         burger.style.transform = "";
         menu1.forEach(item => {
-
             item.style.width = "";
         })
+        
         menu.style.width = "";
     }
+    
 });
 cross.addEventListener("transitionend", function(e) {
     if(e.propertyName !== "transform")return;
@@ -32,7 +33,6 @@ cross.addEventListener("transitionend", function(e) {
         burger.style.transform = "rotate(720deg)";
         burger.style.left = "1.5rem";
         menu1.forEach(item => {
-
             item.style.width = "calc(90vw - 1rem)";
         })
         menu.style.width = "100%";
@@ -48,4 +48,24 @@ burger.addEventListener("transitionend", function(e) {
 
 cv.addEventListener("click", () => {
     window.open('./public/assets/image/dots-top-menu-mobile.png').onload;
+})
+
+menubtn.forEach(button => {
+    button.addEventListener('click', ()=> {
+        navbar.classList.remove('open');
+        menu.style.width = "";
+        menu1.forEach(item => {
+            item.style.width = "";
+        })
+        document.body.classList.remove('open');
+        burger.style.left = "";
+        burger.style.transform = "";
+        burger.addEventListener("transitionend", function(e) {
+            if(e.propertyName !== "left")return;
+            if(this.style.left === "")
+            {
+                this.classList.remove("cross");
+            }
+        })
+    })
 })

@@ -86,7 +86,7 @@ a {
 }
 .border {
     --data-color-y: var(--data-color-c);
-    p {
+    p,p a {
         color: $Ytheme;
     }
 }

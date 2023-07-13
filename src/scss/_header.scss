@@ -94,7 +94,7 @@ header {
         width: auto;
         transform: translate(calc(-95vw - -.5rem), -380px);
         margin: auto;
-            color: var(--data-color-lang);
+        color: var(--data-color-lang);
         &:after {
             border-left: 4px solid transparent;
             border-right: 4px solid transparent;
@@ -107,29 +107,29 @@ header {
             width: 8px;
             top: 10px;
         }
-        // .sublang {
-        //     width: 100px;
-        //     height: 100px;
-        //     z-index: 999;
-        //     transform: translateX(50px);
-        //     li {
-        //         overflow: visible;
-        //         width: 100px;
-        //         height: 100px;
-        //         margin: unset;
-        //         z-index: 999;
-        //     }
-        // }
-        // .sublang .show {
-        //     width: 155px;
-        //     position: absolute;
-        //     display: flex;
-        //     li {
-        //         width: 100px;
-        //         overflow: visible;
-        //         position: absolute;
-        //     }
-        // }
+        .sublang li{
+            display: none;
+            width: auto;
+            height: auto;
+        }
+        &:hover .sublang {
+            border: 1px solid var(--data-color-y);
+            width: auto;
+            height: auto;
+            transform: translate(105%, 35px);
+            padding: unset;
+            li{
+            overflow: visible;
+            display: flex;
+            width: auto;
+            height: auto;
+            z-index: 999;
+            margin: unset;
+            z-index: 999;
+            justify-content: center;
+            background-color: rgba(0, 15, 15, .6);
+        }
+    }
     }
     .colormod {
         display: flex;
@@ -221,6 +221,7 @@ header {
         display: none;
     }
     .menu ul {
+        overflow: visible;
         flex-direction: row;
         background: rgba(0,0,0,.6);
         border: 1px solid #fcee0a;
@@ -246,7 +247,7 @@ header {
         }
         li {
             margin: unset;
-            overflow: unset;
+            overflow: visible;
             width: auto;
             padding: 0 1rem;
             position: relative;
@@ -256,6 +257,7 @@ header {
                     background-color: var(--data-color-r);
                 }
         }
+        
         .lang:after {
                 border-top: 6px solid v.$primecolor;
         }
