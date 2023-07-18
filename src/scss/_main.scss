@@ -116,6 +116,7 @@ h1 {
     height: 100%;
     font-family: v.$font-title;
     transition: opacity .2s;
+    cursor: pointer;
         &:hover {
             opacity: 0.8;
         }

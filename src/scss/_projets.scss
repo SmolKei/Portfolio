@@ -57,9 +57,10 @@
     width: 61px;
     height: 61px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 21% 100%, 0 81%);
-    a {
-        color: v.$darkcolor;
-    }
+        a {
+            color: v.$darkcolor;
+            padding: 22px 19px;
+        }
 }
 .projet-description {
     border: 1px solid var(--data-color-y);
