@@ -105,6 +105,10 @@ header {
   transition: all 2s;
 }
 
+.cross {
+  animation: 1s opa forwards;
+}
+
 .burger {
   display: block;
   width: 100%;
@@ -173,6 +177,7 @@ header {
   transform: translate(calc(-95vw + 0.5rem), -380px);
   margin: auto;
   color: var(--data-color-lang);
+  text-transform: uppercase;
 }
 .menu ul .lang:after {
   border-left: 4px solid transparent;
@@ -195,7 +200,7 @@ header {
   border: 1px solid var(--data-color-y);
   width: auto;
   height: auto;
-  transform: translate(105%, 35px);
+  transform: translate(105%, 5px);
   padding: unset;
 }
 .menu ul .lang:hover .sublang li {
@@ -256,7 +261,7 @@ header {
   max-width: 232px;
   height: 46px;
   position: absolute;
-  margin-bottom: -110%;
+  margin-bottom: calc(-60dvh - 2rem);
 }
 .open ul .contactbtn a {
   color: var(--data-color-secondary);
@@ -282,9 +287,29 @@ header {
     transform: translateX(0);
   }
 }
+@keyframes opa {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (min-height: 670px) and (max-width: 1279px) {
   .open ul .contactbtn {
-    margin-bottom: calc(-70vh - 2rem);
+    margin-bottom: calc(-70dvh - 2rem);
   }
 }
 @media (min-width: 1280px) {
@@ -297,8 +322,7 @@ header {
   .burgerbox {
     display: none;
   }
-  .menu ul {
-    overflow: visible;
+  .menu ul:not(.sublang) {
     flex-direction: row;
     background: rgba(0, 0, 0, 0.6);
     border: 1px solid #fcee0a;
@@ -311,11 +335,11 @@ header {
     text-align: center;
     padding: 0 0 0 20px;
     margin: unset;
-    clip-path: polygon(18px 0, 100% 0, 100% 50%, calc(100% - 18px) 100%, 0 100%, 0 50%);
+    clip-path: polygon(13.3333px 0px, 100% 0px, 100% 25px, calc(100% - 15px) 40px, calc(100% - 15px) 2000%, 0px 2000%, 0px 13.3333px);
   }
-  .menu ul:after {
-    border-right: 19px solid transparent;
-    border-top: 19px solid var(--data-color-menu);
+  .menu ul:not(.sublang):after {
+    border-right: 13px solid transparent;
+    border-top: 13px solid var(--data-color-menu);
     top: 0;
     left: 0;
     content: "";
@@ -323,7 +347,7 @@ header {
     position: absolute;
     width: 10px;
   }
-  .menu ul li {
+  .menu ul:not(.sublang) li {
     margin: unset;
     overflow: visible;
     width: auto;
@@ -332,27 +356,35 @@ header {
     align-items: center;
     display: flex;
   }
-  .menu ul li:hover:not(.contactbtn) {
+  .menu ul:not(.sublang) li:hover:not(.contactbtn) {
     background-color: var(--data-color-r);
   }
-  .menu ul .lang:after {
+  .menu ul:not(.sublang) .lang:after {
     border-top: 6px solid #fff;
   }
-  .menu ul .colormod, .menu ul .lang {
+  .menu ul:not(.sublang) .sublang {
+    overflow: visible;
+    position: absolute;
+    display: flex;
+    top: 2.1rem;
+    margin-right: 4em;
+    padding: unset;
+  }
+  .menu ul:not(.sublang) .colormod, .menu ul:not(.sublang) .lang {
     transform: translateY(0);
     margin: unset;
   }
-  .menu ul .colormod span, .menu ul .lang span {
+  .menu ul:not(.sublang) .colormod span, .menu ul:not(.sublang) .lang span {
     color: #fff;
   }
-  .menu ul .colormod:after, .menu ul .lang:after {
+  .menu ul:not(.sublang) .colormod:after, .menu ul:not(.sublang) .lang:after {
     top: 0;
   }
-  .menu ul .contactbtn {
+  .menu ul:not(.sublang) .contactbtn {
     background-color: var(--data-color-lang);
     padding: 0 20px;
   }
-  .menu ul .contactbtn a {
+  .menu ul:not(.sublang) .contactbtn a {
     color: var(--data-color-secondary);
   }
 }
@@ -539,67 +571,67 @@ h1 {
 
 @keyframes glitch-effect {
   0% {
-    clip: rect(15px, 9999px, 23px, 0);
+    clip: rect(78px, 9999px, 55px, 0);
   }
   5% {
-    clip: rect(68px, 9999px, 92px, 0);
+    clip: rect(59px, 9999px, 10px, 0);
   }
   10% {
-    clip: rect(67px, 9999px, 79px, 0);
+    clip: rect(56px, 9999px, 85px, 0);
   }
   15% {
-    clip: rect(75px, 9999px, 59px, 0);
+    clip: rect(29px, 9999px, 92px, 0);
   }
   20% {
-    clip: rect(63px, 9999px, 50px, 0);
+    clip: rect(19px, 9999px, 40px, 0);
   }
   25% {
-    clip: rect(7px, 9999px, 71px, 0);
+    clip: rect(55px, 9999px, 20px, 0);
   }
   30% {
-    clip: rect(49px, 9999px, 27px, 0);
+    clip: rect(11px, 9999px, 90px, 0);
   }
   35% {
-    clip: rect(65px, 9999px, 66px, 0);
+    clip: rect(26px, 9999px, 63px, 0);
   }
   40% {
-    clip: rect(10px, 9999px, 30px, 0);
+    clip: rect(42px, 9999px, 85px, 0);
   }
   45% {
-    clip: rect(1px, 9999px, 37px, 0);
+    clip: rect(98px, 9999px, 93px, 0);
   }
   50% {
-    clip: rect(79px, 9999px, 13px, 0);
+    clip: rect(45px, 9999px, 1px, 0);
   }
   55% {
-    clip: rect(96px, 9999px, 21px, 0);
+    clip: rect(33px, 9999px, 47px, 0);
   }
   60% {
-    clip: rect(87px, 9999px, 59px, 0);
+    clip: rect(88px, 9999px, 15px, 0);
   }
   65% {
-    clip: rect(44px, 9999px, 40px, 0);
+    clip: rect(10px, 9999px, 99px, 0);
   }
   70% {
-    clip: rect(49px, 9999px, 26px, 0);
+    clip: rect(28px, 9999px, 48px, 0);
   }
   75% {
-    clip: rect(16px, 9999px, 93px, 0);
+    clip: rect(37px, 9999px, 34px, 0);
   }
   80% {
-    clip: rect(80px, 9999px, 87px, 0);
+    clip: rect(41px, 9999px, 31px, 0);
   }
   85% {
-    clip: rect(99px, 9999px, 69px, 0);
+    clip: rect(13px, 9999px, 10px, 0);
   }
   90% {
-    clip: rect(18px, 9999px, 15px, 0);
+    clip: rect(70px, 9999px, 37px, 0);
   }
   95% {
-    clip: rect(65px, 9999px, 80px, 0);
+    clip: rect(69px, 9999px, 4px, 0);
   }
   100% {
-    clip: rect(40px, 9999px, 35px, 0);
+    clip: rect(82px, 9999px, 11px, 0);
   }
 }
 @keyframes blink {
